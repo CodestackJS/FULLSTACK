@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jlsee\\OneDrive\\Documents\\Level3\\LectureFolder\\FULLSTACK\\api\\API.csproj": {}
+    "C:\\Users\\jlsee\\OneDrive\\Documents\\Level3\\LectureFolder\\FULLSTACK\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jlsee\\OneDrive\\Documents\\Level3\\LectureFolder\\FULLSTACK\\api\\API.csproj": {
+    "C:\\Users\\jlsee\\OneDrive\\Documents\\Level3\\LectureFolder\\FULLSTACK\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jlsee\\OneDrive\\Documents\\Level3\\LectureFolder\\FULLSTACK\\api\\API.csproj",
+        "projectUniqueName": "C:\\Users\\jlsee\\OneDrive\\Documents\\Level3\\LectureFolder\\FULLSTACK\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\jlsee\\OneDrive\\Documents\\Level3\\LectureFolder\\FULLSTACK\\api\\API.csproj",
+        "projectPath": "C:\\Users\\jlsee\\OneDrive\\Documents\\Level3\\LectureFolder\\FULLSTACK\\API\\API.csproj",
         "packagesPath": "C:\\Users\\jlsee\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jlsee\\OneDrive\\Documents\\Level3\\LectureFolder\\FULLSTACK\\api\\obj\\",
+        "outputPath": "C:\\Users\\jlsee\\OneDrive\\Documents\\Level3\\LectureFolder\\FULLSTACK\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jlsee\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -134,3 +134,4 @@ C:\Users\jlsee\OneDrive\Documents\Level3\LectureFolder\FULLSTACK\API\obj\Debug\n
 C:\Users\jlsee\OneDrive\Documents\Level3\LectureFolder\FULLSTACK\API\obj\Debug\net8.0\API.pdb
 C:\Users\jlsee\OneDrive\Documents\Level3\LectureFolder\FULLSTACK\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\jlsee\OneDrive\Documents\Level3\LectureFolder\FULLSTACK\API\obj\Debug\net8.0\ref\API.dll
+C:\Users\jlsee\OneDrive\Documents\Level3\LectureFolder\FULLSTACK\API\obj\Debug\net8.0\API.sourcelink.json

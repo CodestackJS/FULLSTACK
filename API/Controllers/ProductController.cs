@@ -62,7 +62,7 @@ public class ProductController : ControllerBase
         _context.Entry(product).State = EntityState.Modified;
         await _context.SaveChangesAsync();
 
-        return BadRequest();
+        return Ok();
     }
 
     [HttpDelete("{id}")]

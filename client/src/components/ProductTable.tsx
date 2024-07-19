@@ -14,19 +14,43 @@ import {
     Button,
 } from '@chakra-ui/react'
 import ColorModeSwitch from './ColorModeSwitch'
+import { AddIcon } from '@chakra-ui/icons'
+import { useState, useSTate } from "react"
+import axios from 'axios';
+import { BASE_URL } from '../constant';
 
+interface Product {
+    id:number;
+    name:string;
+    price:number;
+    description:string;
+    isInStore:boolean
+}
 
+const [data, setData] = useState<Product[]>([])
+const [isLoading, setIsLoading] = useState<boolean>(false)
+
+const fetchData = () => {
+    setIsLoading(true)
+    axios.get(BASE_URL).then(response => {
+        setData(response.data);
+    }).catch((error) => {
+        console.log(error)
+    }).finally(() => {
+        setIsLoading(false)
+    })
+}
 
 const ProductTable = () => {
     return (
         <>
             <ColorModeSwitch />
             <Box shadow={'md'} rounded={'md'} m={32}>
-                <Flex justifyContent={'space-between'} px={'5'}>
+                <Flex justifyContent={'space-between'} alignItems={'center'} px={'5'} mb={10}>
                     <Heading>
                         Product List
                     </Heading>
-                    <Button colorScheme='green'>
+                    <Button leftIcon={<AddIcon/>} color={'teal.300'}>
                         Add Product
                     </Button>
                 </Flex>
@@ -35,9 +59,12 @@ const ProductTable = () => {
                         <TableCaption>Imperial to metric conversion factors</TableCaption>
                         <Thead>
                             <Tr>
-                                <Th>To convert</Th>
-                                <Th>into</Th>
-                                <Th isNumeric>multiply by</Th>
+                                <Th>Id</Th>
+                                <Th>Name</Th>
+                                <Th>Description</Th>
+                                <Th>Is In Stock</Th>
+                                <Th isNumeric>Price</Th>
+                                <Th> Actions</Th>
                             </Tr>
                         </Thead>
                         <Tbody>
@@ -45,25 +72,11 @@ const ProductTable = () => {
                                 <Td>inches</Td>
                                 <Td>millimetres (mm)</Td>
                                 <Td isNumeric>25.4</Td>
-                            </Tr>
-                            <Tr>
-                                <Td>feet</Td>
-                                <Td>centimetres (cm)</Td>
-                                <Td isNumeric>30.48</Td>
-                            </Tr>
-                            <Tr>
-                                <Td>yards</Td>
-                                <Td>metres (m)</Td>
-                                <Td isNumeric>0.91444</Td>
+                                <Td isNumeric>25.4</Td>
+                                <Td isNumeric>25.4</Td>
+                                <Td isNumeric>25.4</Td>
                             </Tr>
                         </Tbody>
-                        <Tfoot>
-                            <Tr>
-                                <Th>To convert</Th>
-                                <Th>into</Th>
-                                <Th isNumeric>multiply by</Th>
-                            </Tr>
-                        </Tfoot>
                     </Table>
                 </TableContainer>
             </Box>

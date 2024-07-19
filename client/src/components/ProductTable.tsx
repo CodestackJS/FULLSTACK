@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react'
 import ColorModeSwitch from './ColorModeSwitch'
 import { AddIcon } from '@chakra-ui/icons'
-import { useState, useSTate } from "react"
+import { useState } from "react"
 import axios from 'axios';
 import { BASE_URL } from '../constant';
 

@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react'
 import ColorModeSwitch from './ColorModeSwitch'
 import { AddIcon } from '@chakra-ui/icons'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import axios from 'axios';
 import { BASE_URL } from '../constant';
 
@@ -40,6 +40,11 @@ const fetchData = () => {
         setIsLoading(false)
     })
 }
+
+useEffect(() => {
+    fetchData();
+}, []);
+
 
 const ProductTable = () => {
     return (
@@ -68,6 +73,17 @@ const ProductTable = () => {
                             </Tr>
                         </Thead>
                         <Tbody>
+                            {data.map((product:Product)=>(
+                                <Tr key={product.id}>
+                                    <Td>{product.id}</Td>
+                                    <Td>{product.name}</Td>
+                                    <Td>{product.description}</Td>
+                                    <Td>{product.isInStore}</Td>
+                                    <Td isNumeric>{product.price}</Td>
+                                    <Td>25.4</Td>
+                                </Tr>
+
+                            ))}
                             <Tr>
                                 <Td>inches</Td>
                                 <Td>millimetres (mm)</Td>
